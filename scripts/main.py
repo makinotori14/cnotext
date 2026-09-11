@@ -23,21 +23,41 @@ def get_cmd():
 def opencode_auth():
     subprocess.run(["opencode", "auth", "login"])
 
-def install():
+def tex_install():
+    subprocess.run(["sudo", "tlmgr", "update", "--self", "--all"])
     doctor_script = Path(__file__).with_name("doctor.py")
     try:
-        subprocess.run([sys.executable, doctor_script], check=True)
+        subprocess.run([sys.executable, doctor_script, "--tex"], check=True)
         print("Все успешно установлено")
+        return 0
     except:
         print("Установите вручную не найденные компоненты.")
         input()
+        return 1
+
+def core_install():
+    doctor_script = Path(__file__).with_name("doctor.py")
+    try:
+        subprocess.run([sys.executable, doctor_script, "--core"], check=True)
+        print("Все успешно установлено")
+        return 0
+    except:
+        print("Установите вручную не найденные компоненты.")
+        input()
+        return 1
+
+def install():
+    if (core_install()):
+        return
+    
+    if (tex_install()):
         return
 
     opencode_auth()
 
 
 def make_note():
-    
+    pass
 
 def settings():
     pass
