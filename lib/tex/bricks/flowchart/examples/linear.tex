@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=9mm]
+  \node[flow start] (start) {Start};
+  \node[flow process,below=of start] (read) {Read $x$};
+  \node[flow process,below=of read] (square) {Compute $y=x^2$};
+  \node[flow start,below=of square] (stop) {Stop};
+  \draw[flow line] (start)--(read);
+  \draw[flow line] (read)--(square);
+  \draw[flow line] (square)--(stop);
+\end{tikzpicture}
+\end{document}

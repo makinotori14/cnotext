@@ -2,6 +2,7 @@ SRC = {
     "opencode": "brew install anomalyco/tap/opencode",
     "pdflatex": "brew install --cask basictex",
     "pdftoppm": "brew install poppler",
+    "pngpaste": "brew install pngpaste",
 }
 
 TEX = {

@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{xcolor,listings}
+\input{../commands.tex}
+\begin{document}
+\begin{lstlisting}[language=Python,caption={Euclidean algorithm},label={lst:gcd}]
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+\end{lstlisting}
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[scale=.9]
+  \draw[coordinate axes] (-1,0)--(5,0) node[right]{$x$};
+  \draw[coordinate axes] (0,-1)--(0,4) node[above]{$y$};
+  \draw[coordinate guide] (3,0)--(3,2)--(0,2);
+  \node[coordinate point,label=above right:{$P(3,2)$}] at (3,2) {};
+  \draw[-{Stealth},blue,thick] (0,0)--(3,2) node[midway,above left]{$v$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=14mm]
+  \node[diagram node] (source) {Raw data};
+  \node[diagram node,right=of source] (model) {Model};
+  \node[diagram node,right=of model] (result) {Prediction};
+  \draw[diagram arrow] (source)--node[above]{input}(model);
+  \draw[diagram arrow] (model)--node[above]{output}(result);
+\end{tikzpicture}
+\end{document}

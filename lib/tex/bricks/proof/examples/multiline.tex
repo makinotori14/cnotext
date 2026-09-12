@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{amsmath,amsthm}
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\begin{proposition}
+For $n\ge1$, one has $1+\cdots+n=n(n+1)/2$.
+\end{proposition}
+\begin{proof}[Proof by induction]
+The claim is clear for $n=1$. If it holds for $n$, then
+\begin{align*}
+  1+\cdots+n+(n+1)
+    &= \frac{n(n+1)}2+(n+1) \\
+    &= \frac{(n+1)(n+2)}2.
+\end{align*}
+\end{proof}
+\end{document}

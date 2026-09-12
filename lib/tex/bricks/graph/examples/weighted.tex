@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=20mm]
+  \node[graph vertex] (a) {$A$};
+  \node[graph vertex,right=of a] (b) {$B$};
+  \node[graph vertex,below right=of a] (c) {$C$};
+  \draw[graph edge] (a)--node[above] {$4$} (b);
+  \draw[graph edge] (b)--node[right] {$2$} (c);
+  \draw[graph edge] (c)--node[left] {$5$} (a);
+  \draw[graph edge] (c) edge[loop below] node {$1$} (c);
+\end{tikzpicture}
+\end{document}

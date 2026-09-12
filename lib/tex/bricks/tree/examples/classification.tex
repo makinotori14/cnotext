@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[
+  level 1/.style={sibling distance=42mm,level distance=14mm},
+  level 2/.style={sibling distance=21mm,level distance=14mm}]
+\node[tree node]{Numbers}
+  child {node[tree node]{Real}
+    child {node[tree node]{Rational}}
+    child {node[tree node]{Irrational}}}
+  child {node[tree node]{Complex non-real}};
+\end{tikzpicture}
+\end{document}

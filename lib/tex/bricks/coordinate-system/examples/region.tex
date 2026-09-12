@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[scale=.8]
+  \fill[blue!15] (0,0)--(4,0)--(0,3)--cycle;
+  \draw[blue,thick] (0,3)--(4,0) node[midway,above right]{$3x+4y=12$};
+  \draw[coordinate axes] (-.5,0)--(5,0) node[right]{$x$};
+  \draw[coordinate axes] (0,-.5)--(0,4) node[above]{$y$};
+  \node[below left] at (0,0) {$0$};
+\end{tikzpicture}
+\end{document}

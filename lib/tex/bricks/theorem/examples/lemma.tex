@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\input{../commands.tex}
+\begin{document}
+\section{Sequences}
+\begin{lemma}
+Every convergent real sequence is bounded.
+\end{lemma}
+\begin{proof}
+Choose $N$ such that $|x_n-x|<1$ for $n\ge N$, then bound the finite initial
+segment together with $|x|+1$.
+\end{proof}
+\end{document}

@@ -57,7 +57,8 @@ def install():
 
 
 def make_note():
-    pass
+    note_script = Path(__file__).with_name("make_note.py")
+    subprocess.run([sys.executable, note_script], check=True)
 
 def settings():
     pass

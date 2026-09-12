@@ -1,0 +1,11 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[grow=right,level distance=30mm,sibling distance=14mm,prob branch]
+\node[probability node]{Coin}
+ child {node[probability leaf]{Heads} edge from parent node[probability label] {$1/2$}}
+ child {node[probability leaf]{Tails} edge from parent node[probability label] {$1/2$}};
+\end{tikzpicture}
+\end{document}

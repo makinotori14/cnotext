@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\input{../commands.tex}
+\begin{document}
+\section{Calculus}
+\begin{theorem}[Mean value theorem]\label{thm:mvt}
+If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then some
+$c\in(a,b)$ satisfies
+\[
+  f'(c)=\frac{f(b)-f(a)}{b-a}.
+\]
+\end{theorem}
+\end{document}

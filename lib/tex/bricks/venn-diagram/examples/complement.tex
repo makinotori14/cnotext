@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+  \fill[blue!20,even odd rule] (-2.5,-1.8) rectangle (2.5,1.8) (0,0) circle (1.2);
+  \draw[venn universe] (-2.5,-1.8) rectangle (2.5,1.8) node[above left] {$U$};
+  \draw[venn set] (0,0) circle (1.2) node {$A$};
+  \node at (1.75,1.1) {$A^c$};
+\end{tikzpicture}
+\end{document}

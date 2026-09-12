@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+  \begin{scope}
+    \clip (-.8,0) circle (1.5);
+    \fill[venn fill] (.8,0) circle (1.5);
+  \end{scope}
+  \draw[venn set] (-.8,0) circle (1.5) node[above left=9mm] {$A$};
+  \draw[venn set] (.8,0) circle (1.5) node[above right=9mm] {$B$};
+  \node at (0,0) {$A\cap B$};
+\end{tikzpicture}
+\end{document}

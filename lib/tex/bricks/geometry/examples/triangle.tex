@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,angles,quotes}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (1.2,2.6);
+  \draw[geometry line] (A)--(B)--(C)--cycle;
+  \foreach \p/\pos in {A/below left,B/below right,C/above}
+    \node[geometry point,label=\pos:{$\p$}] at (\p) {};
+  \pic[angle style,"$\alpha$"] {angle=B--A--C};
+\end{tikzpicture}
+\end{document}

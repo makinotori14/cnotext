@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[x=1.2cm]
+  \draw[number axis] (-3,0)--(3,0);
+  \draw[interval] (-1,0)--(2,0);
+  \node[closed endpoint,label=below:{$-1$}] at (-1,0) {};
+  \node[open endpoint,label=below:{$2$}] at (2,0) {};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=12mm and 10mm]
+  \node[diagram node] (api) {Public API};
+  \node[diagram node,below left=of api] (core) {Core};
+  \node[diagram node,below right=of api] (cache) {Cache};
+  \draw[diagram arrow] (api)--(core);
+  \draw[diagram arrow] (api)--(cache);
+  \node[diagram group,fit=(core)(cache),label=below:internal services] {};
+\end{tikzpicture}
+\end{document}

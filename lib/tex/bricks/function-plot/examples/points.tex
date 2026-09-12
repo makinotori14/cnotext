@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[function axis,xmin=0,xmax=5,ymin=0,ymax=11]
+  \addplot[only marks,mark=*,blue] coordinates {(1,2.1)(2,3.9)(3,6.2)(4,8.1)(5,9.8)};
+  \addplot[red,domain=0:5]{2*x};
+  \legend{measurements,$y=2x$}
+\end{axis}
+\end{tikzpicture}
+\end{document}

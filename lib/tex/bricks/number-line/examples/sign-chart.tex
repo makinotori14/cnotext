@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[x=1.2cm]
+  \draw[number axis] (-3,0)--(3,0);
+  \foreach \x/\lab in {-1/-1,1/1}{
+    \draw (\x,.12)--(\x,-.12) node[below]{$\lab$};}
+  \node[above] at (-2,0) {$+$};
+  \node[above] at (0,0) {$-$};
+  \node[above] at (2,0) {$+$};
+\end{tikzpicture}
+\end{document}

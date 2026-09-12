@@ -1,0 +1,14 @@
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}[section]
+\tcolorboxenvironment{problem}{
+  breakable,colback=cyan!4,colframe=cyan!55!black,
+  boxrule=.6pt,arc=1mm
+}
+\newlist{taskparts}{enumerate}{1}
+\setlist[taskparts]{label=(\alph*),ref=\alph*,leftmargin=*,itemsep=.25em,topsep=.35em}
+\newcommand{\tagproblem}[2]{%
+  \begin{tcolorbox}[breakable,title={Problem #1},
+    colback=cyan!4,colframe=cyan!55!black,boxrule=.6pt,arc=1mm,fonttitle=\bfseries]
+  #2
+  \end{tcolorbox}%
+}

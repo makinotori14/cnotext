@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{calc,angles,quotes}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+  \coordinate (O) at (0,0);
+  \coordinate (T) at (2,0);
+  \draw[geometry line] (O) circle[radius=2];
+  \draw[geometry line] (O)--node[above]{$r$}(T);
+  \draw[geometry line] (2,-1.4)--(2,1.4) node[above]{tangent};
+  \fill (O) circle(1.4pt) node[below left]{$O$};
+  \fill (T) circle(1.4pt) node[below right]{$T$};
+  \draw ($(T)+(-.28,0)$)--($(T)+(-.28,.28)$)--($(T)+(0,.28)$);
+\end{tikzpicture}
+\end{document}

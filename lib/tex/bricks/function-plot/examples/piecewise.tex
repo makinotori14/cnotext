@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[function axis,xmin=-3,xmax=3,ymin=-.5,ymax=3.5]
+  \addplot[blue,thick,domain=-3:0,samples=50]{-x};
+  \addplot[blue,thick,domain=0:3,samples=50]{x^2/3};
+  \addplot[only marks,mark=*,blue] coordinates {(0,0)};
+\end{axis}
+\end{tikzpicture}
+\end{document}

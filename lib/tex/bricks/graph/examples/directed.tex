@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=18mm]
+  \node[graph vertex] (s) {$s$};
+  \node[graph vertex,right=of s] (u) {$u$};
+  \node[graph vertex,right=of u] (t) {$t$};
+  \draw[directed edge] (s)--(u);
+  \draw[directed edge] (u)--(t);
+  \draw[directed edge,bend left=35] (s) to (t);
+\end{tikzpicture}
+\end{document}

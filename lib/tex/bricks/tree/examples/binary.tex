@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{trees,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[level distance=12mm,
+  level 1/.style={sibling distance=28mm},level 2/.style={sibling distance=14mm}]
+\node[tree node] {$8$}
+ child {node[tree node] {$3$} child {node[tree node] {$1$}} child {node[tree node] {$6$}}}
+ child {node[tree node] {$10$} child[missing] child {node[tree node] {$14$}}};
+\end{tikzpicture}
+\end{document}

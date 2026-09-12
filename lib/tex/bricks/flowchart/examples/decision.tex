@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=11mm and 20mm]
+  \node[flow start] (start) {Start};
+  \node[flow decision,below=of start] (test) {$n>0$?};
+  \node[flow process,below=of test] (step) {Replace $n$ by $n-1$};
+  \node[flow start,right=of test] (stop) {Stop};
+  \draw[flow line] (start)--(test);
+  \draw[flow line] (test)--node[right]{yes}(step);
+  \draw[flow line] (step.west)--++(-12mm,0)|-(test.west);
+  \draw[flow line] (test)--node[above]{no}(stop);
+\end{tikzpicture}
+\end{document}

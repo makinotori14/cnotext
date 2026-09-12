@@ -1,0 +1,13 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\input{../commands.tex}
+\begin{document}
+\begin{tikzpicture}[node distance=16mm]
+  \node[graph vertex] (a) {$a$};
+  \node[graph vertex,right=of a] (b) {$b$};
+  \node[graph vertex,below=of a] (c) {$c$};
+  \node[graph vertex,below=of b] (d) {$d$};
+  \draw[graph edge] (a)--(b)--(d)--(c)--(a) (a)--(d);
+\end{tikzpicture}
+\end{document}

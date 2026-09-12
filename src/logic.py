@@ -1,5 +1,9 @@
-# создать репозиторий
+from repo import make_repo
+from agent import make_query
 
-# подключиться к opencode
+def main():
+    repo_path = make_repo()
+    make_query(repo_path)
 
-# сделать нужные запросы
+if __name__ == "__main__":
+    main()
