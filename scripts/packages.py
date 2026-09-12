@@ -57,6 +57,8 @@ TEX = {
     "cleveref": "sudo tlmgr install cleveref",
     "listings": "sudo tlmgr install listings",
     "algorithm2e": "sudo tlmgr install algorithm2e",
+    "trimspaces": "sudo tlmgr install trimspaces",
+    "pdfcol": "sudo tlmgr install pdfcol",
 }
 
 TEX_PACKAGES = {
@@ -130,4 +132,8 @@ TEX_PACKAGES = {
     # Code / algorithms
     "listings.sty": "listings",
     "algorithm2e.sty": "algorithm2e",
+
+    # Utilities
+    "trimspaces.sty": "trimspaces",
+    "pdfcol.sty": "pdfcol",
 }
